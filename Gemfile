@@ -71,5 +71,7 @@ end
 group :production do
   gem "pg"
 end
+gem "rails_live_reload", group: :development
+
 
 gem "tailwindcss-rails", "~> 4.4"
