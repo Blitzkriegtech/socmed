@@ -1,10 +1,15 @@
 <% content_for :title, "Home" %>
-<div>
-  <h1 class="font-bold text-4xl">Socmed Homepage</h1>
-  <p class="font-bold text-2xl mt-4">
-    This is the home page for the
-    <a href="https://www.railstutorial.org">Ruby on Rails Tutorial</a>
-    sample application.
-  </p>
-  
+
+<div class="glass hero min-h-[50vh] bg-base-200 border-base-300 mt-10 rounded-lg">
+  <div class="hero-content flex-col lg:flex-row-reverse text-center max-w-4xl">
+    <div>
+      <h1 class="text-5xl font-bold">Welcome to SOCMED</h1>
+      <p class="py-4">
+            This is the home page for the
+            <%= link_to "Ruby on Rails Tutorial", "https://www.railstutorial.org", class: "link link-hover text-red-500", target: "_blank", rel: "noopener" %>
+            sample application.
+      </p>
+      <%= link_to "Sign Up", signup_path, class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>

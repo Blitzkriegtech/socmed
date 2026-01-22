@@ -3,7 +3,6 @@
  *  daisyUI bundle
  *  https://daisyui.com/
  */
-
 // packages/daisyui/functions/themeOrder.js
 var themeOrder_default = [
   "light",

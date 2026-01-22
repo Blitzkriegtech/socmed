@@ -1,0 +1,24 @@
+<footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-5">
+  <nav class="grid grid-flow-col gap-4">
+    <%= link_to "About", about_path, class: "link link-hover"%>
+    <%= link_to "Contact", contact_path, class: "link link-hover"%>
+    <%= link_to "Jobs", "https://ph.jobstreet.com/", class: "link link-hover", target: "_blank", rel: "noopener"%>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav>
+    <div class="grid grid-flow-col gap-4">
+      <%= link_to "https://twitter.com", target: "_blank", rel: "noopener" do %>
+        <%= render "shared/icons/twitter" %>
+      <% end %>
+      <%= link_to "https://youtube.com", target: "_blank", rel: "noopener" do %>
+        <%= render "shared/icons/youtube" %>
+      <% end %>
+      <%= link_to "https://facebook.com", target: "_blank", rel: "noopener" do %>
+        <%= render "shared/icons/facebook" %>
+      <% end %>
+    </div>
+  </nav>
+  <aside>
+    <p>Copyright © <%= Time.current.year %>- All right reserved by SOCMED by ALJUN</p>
+  </aside>
+</footer>
