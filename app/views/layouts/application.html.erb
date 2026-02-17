@@ -24,9 +24,13 @@
 
   <body class="flex flex-col min-h-screen">
     <%= render "layouts/navbar" %>
-    <main class="container mx-auto px-5 py-8 mt-20 flex-1">
-      <%= yield %>
+    <main class="flex-1">
+      <div class="max-w-4xl pt-24 mx-auto">
+        <%= render "shared/flash" %>
+        <%= yield %>
+      </div>
     </main>
+    <%= debug(params) if Rails.env.development? %>
     <%= render "layouts/footer" %>
   </body>
 </html>
