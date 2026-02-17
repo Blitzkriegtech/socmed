@@ -1,0 +1,8 @@
+<% content_for :title, @user.name %>
+
+<div class="avatar avatar-placeholder gap-2 flex justify-start items-center">
+  <div class="bg-neutral text-neutral-content w-16 h-16 rounded-full">
+    <span class="text-xl"><%= avatar_initials @user %></span>
+  </div>
+  <div class="text-xl text-mono"><%= @user.name %></div>
+</div>
