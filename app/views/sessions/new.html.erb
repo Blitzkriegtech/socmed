@@ -1,0 +1,27 @@
+<%= content_for :title, "Login" %>
+
+<div class="flex justify-center p-4">
+  <div class="bg-white text-gray-500 max-w-96 w-full md:p-6 p-4 text-left text-sm rounded-xl shadow-[0px_0px_10px_0px] shadow-black/10">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Welcome back</h2>
+    <%= form_with(url: login_path, scope: :session ) do |f| %>
+      <%= f.email_field :email, class: "w-full bg-transparent border my-3 border-gray-500/30 outline-none rounded-full py-2.5 px-4", placeholder: "Enter your email", required: true  %>
+      <%= f.password_field :password, class: "w-full bg-transparent border my-3 border-gray-500/30 outline-none rounded-full py-2.5 px-4", placeholder: "Enter your password", required: true  %>
+      <div class="text-right py-4">
+        <%= link_to "Forgot Password", "#", class: "text-blue-600 underline" %>
+      </div>
+      <%= f.submit "Log in", class: "w-full mb-3 my-3 bg-indigo-500 py-2.5 rounded-full text-white" %>
+    <% end %>
+
+    <p class="text-center mt-4">Don't have an account? <%= link_to "Signup", signup_path, class: "text-blue-500 underline" %></p>
+
+    <button type="button" class="w-full flex items-center gap-2 justify-center mt-5 bg-black py-2.5 rounded-full text-white">
+      <img class="h-4 w-4" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/login/appleLogo.png" alt="appleLogo">
+      Log in with Apple
+    </button>
+
+    <button type="button" class="w-full flex items-center gap-2 justify-center my-3 bg-white border border-gray-500/30 py-2.5 rounded-full text-gray-800">
+      <img class="h-4 w-4" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/login/googleFavicon.png" alt="googleFavicon">
+      Log in with Google
+    </button>
+  </div>
+</div>

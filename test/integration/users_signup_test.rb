@@ -38,5 +38,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_not_nil flash[:success]
     assert_select "div.alert-success", text: /Welcome to SOCMED!/
     assert_template "users/show"
+    assert is_logged_in?
   end
 end
